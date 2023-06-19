@@ -1,8 +1,12 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <style scoped lang="scss">
+  .footer {
+    
+  }
 </style>
 
 <template>
-  <div>
+  <footer class="footer">
     Footer
-  </div>
+  </footer>
 </template>

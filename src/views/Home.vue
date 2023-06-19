@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <style scoped lang="scss">
 
 </style>
