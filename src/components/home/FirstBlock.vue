@@ -3,11 +3,11 @@
   @import '@/assets/styles/variables.scss';
   .first {
     background-color: $dark-navy-blue-color;
-    padding: 60px 20px 0;
+    padding: 60px 20px 40px;
     height: max-content;
 
     @include onDesktop {
-      padding-top: 120px;
+      padding: 60px 20px 80px;
     }
 
     &__title {
@@ -61,6 +61,11 @@
 
     &__card {
     }
+
+    &__button {
+      display: block;
+      margin: 0 auto;
+    }
   }
 </style>
 
@@ -75,13 +80,14 @@
         :product="product"
       />
     </div>
-
+    <OfferButton class="first__button" />
 
   </div>
 </template>
 
 <script setup>
   import FirstBlockCard from './FirstBlockCard.vue';
+  import OfferButton from '../partials/OfferButton.vue';
   const products = [
     {
       'title': '50%',
