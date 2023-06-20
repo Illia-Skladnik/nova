@@ -2,3 +2,5 @@ Logo add btn
 Rewrite header on the grid or add properties for 10% margin
 Check hovers and actives
 Fix white background on the header
+Check separator width in footer it shouldn't be 100%
+Logo.vue rewrite img to btn
