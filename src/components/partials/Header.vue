@@ -15,11 +15,14 @@
     &__picture {
       display: flex;
       justify-content: center;
+      overflow: hidden;
     }
 
     &__image {
       height: #{$banner-height-mobile}px;
       position: absolute;
+      width: 100%;
+      object-fit: cover;
 
       @include onMobile {
         height: #{$banner-height-desktop}px;
@@ -27,10 +30,98 @@
 
       @include onDesktop {
         width: 100%;
-        object-fit: cover;
+
       }
     }
+
+    &__logo {
+      height: 37px;
+      width: 197px;
+
+      @include onDesktop {
+        height: 49px;
+        width: 268px;
+      }
+    }
+
+    &__wrapper {
+      position: absolute;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      padding: 35px 20px 0;
+
+      @include onDesktop {
+        padding: 35px 10% 0;
+      }
+    }
+
+    &__nav {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 102px;
+
+      @include onDesktop {
+        margin-bottom: 168px;
+      }
+    }
+
+    &__login-button {
+      height: 49px;
+      width: 171px;
+      background-color: $dark-blue-color;
+      color: $white-color;
+
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 25px;
+
+      &:hover {
+        background-color: $dark-navy-blue-color;
+      }
+    }
+
+    &__title {
+      color: $white-color;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 48px;
+
+      &--green {
+        color: $bright-green-color;
+      }
+
+      &--block {
+        display: block;
+      }
+
+      @include onDesktop {
+        font-size: 64px;
+        line-height: 78px;
+      }
+    }
+
+    &__title-wrapper {
+      max-width: 752px;
+      margin-bottom: 50px;
+    }
+
+    &__description {
+      max-width: 387px;
+
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 25px;
+      color: $white-color;
+
+      margin-bottom: 50px;
+    }
   }
+
 </style>
 
 <template>
@@ -39,10 +130,44 @@
       <source media="(min-width: 375px)" :srcset="desktopBanner">
       <img class="header__image" :src="mobileBanner" alt="banner">
     </picture>
+
+    <div class="header__wrapper">
+      <nav class="header__nav">
+        <Logo class="header__logo"/>
+        <img
+          v-if="visibleButton"
+          class="logo"
+          :src="burgerMenu"
+          alt="Burger menu"
+        />
+
+        <button v-else class="header__login-button">
+          ZALOGUJ
+        </button>
+      </nav>
+
+      <div class="header__title-wrapper">
+        <span class="header__title header__title--block">Instalacje wodne </span>
+        <span class="header__title">i grzewcze </span>
+        <span class="header__title header__title--green">z systemem wciskowym</span>
+      </div>
+
+      <div class="header__description">
+        Prezentujemy systemy wciskowe z polibutylenu - materiału odpornego na mróz, chemię i wysokie ciśnienie!
+      </div>
+
+      <OfferButton/>
+    </div>
   </header>
 </template>
 
 <script setup>
+  import Logo from './Logo.vue';
+  import OfferButton from './OfferButton.vue';
+  import burgerMenu from '@/assets/svg/burgerMenu.svg';
+  import { computed } from 'vue';
+
+  const visibleButton = computed(() => window.innerWidth < 1440);
   const mobileBanner = new URL('@/assets/images/mobile/main.jpg', import.meta.url);
   const desktopBanner = new URL('@/assets/images/desktop/main.jpg', import.meta.url);
 </script>
