@@ -1,12 +1,16 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <style scoped lang="scss">
+  .home {
 
+  }
 </style>
 
 <template>
-  <div>Main component</div>
+  <div class="home">
+    <FirstBlock/>
+  </div>
 </template>
 
 <script setup>
-
+  import FirstBlock from '../components/home/FirstBlock.vue'
 </script>

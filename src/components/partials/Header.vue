@@ -11,7 +11,6 @@
       height: #{$banner-height-desktop}px;
     }
 
-
     &__picture {
       display: flex;
       justify-content: center;
@@ -45,16 +44,10 @@
     }
 
     &__wrapper {
-      position: absolute;
-      width: 100%;
+      margin: 0 auto;
+      max-width: 1240px;
       display: flex;
       flex-direction: column;
-
-      padding: 35px 20px 0;
-
-      @include onDesktop {
-        padding: 35px 10% 0;
-      }
     }
 
     &__nav {
@@ -120,6 +113,18 @@
 
       margin-bottom: 50px;
     }
+
+    &__block {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+
+      padding: 35px 20px 0;
+
+      @include onDesktop {
+        padding: 35px 100px 0;
+      }
+    }
   }
 
 </style>
@@ -131,7 +136,8 @@
       <img class="header__image" :src="mobileBanner" alt="banner">
     </picture>
 
-    <div class="header__wrapper">
+    <div  class="header__block">
+      <div class="header__wrapper">
       <nav class="header__nav">
         <Logo class="header__logo"/>
         <img
@@ -158,6 +164,8 @@
 
       <OfferButton/>
     </div>
+    </div>
+
   </header>
 </template>
 

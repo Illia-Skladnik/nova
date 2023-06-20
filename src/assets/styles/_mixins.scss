@@ -9,4 +9,10 @@
         @content;
     }
 }
-  
+
+@mixin on2columns {
+    @media (min-width: 860px) {
+        @content;
+    }
+}
+
