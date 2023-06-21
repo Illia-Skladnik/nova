@@ -59,9 +59,6 @@
       }
     }
 
-    &__card {
-    }
-
     &__button {
       display: block;
       margin: 0 auto;
