@@ -89,7 +89,6 @@
 
       @include onDesktop {
         margin-bottom: 40px;
-        color: var(--color-palette-white, #FFF);
         font-size: 56px;
         line-height: 68px;
       }
