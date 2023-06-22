@@ -132,11 +132,15 @@
  .border-color-selected {
    border-color: #FAA51A;
  }
- .ml-carousel-prev {
-   margin-right: -50%;
+ .carousel-prev {
+   position: absolute;
+   top: 0;
+   left: 0;
  }
- .mr-carousel-next {
-   margin-right: -50%;
+ .carousel-next {
+   position: absolute;
+   top: 0;
+   right: 0;
  }
  .max-width {
    max-width: 375px;
@@ -146,15 +150,12 @@
 
 <template>
   <div class="text-center">
-    <v-window v-model="benefitSlider" touch continuous show-arrows class="max-width">
-      <template v-slot:prev>
-        <div class="text-h5 carousel-title-prev font-weight-bold">{{prevSlideTitle}}</div>
-      </template>
-      <template v-slot:next>
-        <div class="text-h5 carousel-title-next font-weight-bold">{{ nextSlideTitle }}</div>
-      </template>
+    <v-window v-model="benefitSlider" touch continuous class="max-width">
+
       <v-window-item class="text-center" v-for="(slide,key) in slides" :key="key">
+        <div class="text-h5 carousel-title-prev font-weight-bold carousel-prev">{{prevSlideTitle(key)}}</div>
         <div class="text-h5 text-success font-weight-bold carousel-title mx-5">{{ slide.title }}</div>
+        <div class="text-h5 carousel-title-next font-weight-bold carousel-next">{{ nextSlideTitle(key) }}</div>
       </v-window-item>
     </v-window>
 <!--    <div class="d-flex justify-center overflow-x-hidden">-->
@@ -641,17 +642,16 @@
         ],
       }
     },
-    computed: {
-      prevSlideTitle() {
-        console.log(this.slides.length);
-        let prev = this.benefitSlider - 1;
+    methods: {
+      prevSlideTitle(key) {
+        let prev = key - 1;
         if (prev < 0) {
           prev = this.slides.length - 1;
         }
         return this.slides[prev].title.slice(-3)
       },
-      nextSlideTitle() {
-        let next = this.benefitSlider + 1;
+      nextSlideTitle(key) {
+        let next = key + 1;
         if (next > this.slides.length - 1) {
           next = 0;
         }
