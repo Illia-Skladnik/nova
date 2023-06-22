@@ -10,6 +10,7 @@
     <FirstBlock/>
     <SecondBlock/>
     <ThirdBlock/>
+    <FourthBlock/>
   </div>
 </template>
 
@@ -17,4 +18,5 @@
   import FirstBlock from '../components/home/FirstBlock.vue'
   import SecondBlock from '../components/home/SecondBlock.vue'
   import ThirdBlock from '../components/home/ThirdBlock.vue'
+  import FourthBlock from '../components/home/FourthBlock.vue'
 </script>

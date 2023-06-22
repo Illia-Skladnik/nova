@@ -137,7 +137,6 @@
       </ul>
     </div>
 
-
     <img class="third__map" :src="map" alt="map">
   </div>
 </div>
