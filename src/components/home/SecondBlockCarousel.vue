@@ -43,7 +43,6 @@
     &__item-2 {
       width: 100%;
       height: 100%;
-      background-color: purple;
     }
 
     &__value {
@@ -157,14 +156,7 @@
         <div class="text-h5 text-success font-weight-bold carousel-title mx-5">{{ slide.title }}</div>
       </v-window-item>
     </v-window>
-<!--    <div class="d-flex justify-center overflow-x-hidden">-->
-<!--      <div class="text-h5 carousel-title-prev font-weight-bold carousel-title mx-5">Miedź prasowana</div>-->
-<!--      <div class="text-h5 text-success font-weight-bold carousel-title mx-5">Miedź prasowana</div>-->
-<!--      <div class="text-h5 carousel-title-next font-weight-bold carousel-title mx-5">Miedź prasowana</div>-->
-<!--&lt;!&ndash;      <div class="">Polipropylen zgrzewany</div>&ndash;&gt;-->
-<!--&lt;!&ndash;      <div class="">Pex</div>&ndash;&gt;-->
-<!--&lt;!&ndash;      <div class="">Polibutylen</div>&ndash;&gt;-->
-<!--    </div>-->
+
     <div class="px-16 py-8 d-flex justify-center">
       <div v-for="(slide,index) in slides"
            :key="index"
