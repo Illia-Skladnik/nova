@@ -150,8 +150,7 @@
 <template>
   <div class="text-center">
     <v-window v-model="benefitSlider" touch continuous class="max-width">
-
-      <v-window-item class="text-center" v-for="(slide,key) in slides" :key="key">
+      <v-window-item class="text-center" v-for="(slide, key) in slides" :key="key">
         <div class="text-h5 carousel-title-prev font-weight-bold carousel-prev">{{prevSlideTitle(key)}}</div>
         <div class="text-h5 text-success font-weight-bold carousel-title mx-5">{{ slide.title }}</div>
         <div class="text-h5 carousel-title-next font-weight-bold carousel-next">{{ nextSlideTitle(key) }}</div>
@@ -160,10 +159,11 @@
 
     <div class="px-16 py-8 d-flex justify-center">
       <div v-for="(slide,index) in slides"
-           :key="index"
-           :aria-details="slide.title"
-           :class="index === benefitSlider ? 'border-color-selected':''"
-           class="carousel-divider mx-1"></div>
+        :key="index"
+        :aria-details="slide.title"
+        :class="index === benefitSlider ? 'border-color-selected':''"
+        class="carousel-divider mx-1">
+      </div>
     </div>
     <div class="carousel-wrapper">
 
@@ -298,26 +298,6 @@
           <div class="carousel-wrapper__item-1">
             <div class="carousel-wrapper__row">
               <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-            </div>
-            <div class="carousel-wrapper__title-separator"></div>
-            <div class="carousel-wrapper__row">
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-            </div>
-            <div class="carousel-wrapper__separator"></div>
-            <div class="carousel-wrapper__row">
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
@@ -328,7 +308,7 @@
             <div class="carousel-wrapper__separator"></div>
             <div class="carousel-wrapper__row">
               <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
@@ -338,7 +318,7 @@
             <div class="carousel-wrapper__separator"></div>
             <div class="carousel-wrapper__row">
               <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
@@ -351,16 +331,6 @@
               <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-            </div>
-            <div class="carousel-wrapper__separator"></div>
-            <div class="carousel-wrapper__row">
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
@@ -380,10 +350,30 @@
               <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+            </div>
+            <div class="carousel-wrapper__separator"></div>
+            <div class="carousel-wrapper__row">
+              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+            </div>
+            <div class="carousel-wrapper__separator"></div>
+            <div class="carousel-wrapper__row">
               <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
             </div>
             <div class="carousel-wrapper__separator"></div>
             <div class="carousel-wrapper__row">
@@ -394,6 +384,16 @@
               <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
+            </div>
+            <div class="carousel-wrapper__separator"></div>
+            <div class="carousel-wrapper__row">
+              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
             </div>
           </div>
         </v-carousel-item>
@@ -404,6 +404,16 @@
               <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+            </div>
+            <div class="carousel-wrapper__separator"></div>
+            <div class="carousel-wrapper__row">
+              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
@@ -413,36 +423,6 @@
             <div class="carousel-wrapper__row">
               <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-            </div>
-            <div class="carousel-wrapper__separator"></div>
-            <div class="carousel-wrapper__row">
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-            </div>
-            <div class="carousel-wrapper__separator"></div>
-            <div class="carousel-wrapper__row">
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-            </div>
-            <div class="carousel-wrapper__separator"></div>
-            <div class="carousel-wrapper__row">
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
@@ -455,16 +435,6 @@
               <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-            </div>
-            <div class="carousel-wrapper__separator"></div>
-            <div class="carousel-wrapper__row">
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
@@ -484,10 +454,20 @@
               <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+            </div>
+            <div class="carousel-wrapper__separator"></div>
+            <div class="carousel-wrapper__row">
               <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
             </div>
             <div class="carousel-wrapper__separator"></div>
             <div class="carousel-wrapper__row">
@@ -495,9 +475,29 @@
               <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+            </div>
+            <div class="carousel-wrapper__separator"></div>
+            <div class="carousel-wrapper__row">
               <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+            </div>
+            <div class="carousel-wrapper__separator"></div>
+            <div class="carousel-wrapper__row">
+              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
             </div>
           </div>
         </v-carousel-item>
@@ -505,9 +505,79 @@
         <v-carousel-item>
           <div class="carousel-wrapper__item-1">
             <div class="carousel-wrapper__row">
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+            </div>
+            <div class="carousel-wrapper__separator"></div>
+            <div class="carousel-wrapper__row">
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+            </div>
+            <div class="carousel-wrapper__separator"></div>
+            <div class="carousel-wrapper__row">
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+            </div>
+            <div class="carousel-wrapper__separator"></div>
+            <div class="carousel-wrapper__row">
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+            </div>
+            <div class="carousel-wrapper__separator"></div>
+            <div class="carousel-wrapper__row">
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+            </div>
+            <div class="carousel-wrapper__separator"></div>
+            <div class="carousel-wrapper__row">
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+            </div>
+            <div class="carousel-wrapper__separator"></div>
+            <div class="carousel-wrapper__row">
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+            </div>
+            <div class="carousel-wrapper__separator"></div>
+            <div class="carousel-wrapper__row">
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
@@ -515,17 +585,7 @@
             </div>
             <div class="carousel-wrapper__separator"></div>
             <div class="carousel-wrapper__row">
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-            </div>
-            <div class="carousel-wrapper__separator"></div>
-            <div class="carousel-wrapper__row">
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
@@ -535,73 +595,13 @@
             </div>
             <div class="carousel-wrapper__separator"></div>
             <div class="carousel-wrapper__row">
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
+              <div class="carousel-wrapper__value carousel-wrapper__value--orange"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
               <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-            </div>
-            <div class="carousel-wrapper__separator"></div>
-            <div class="carousel-wrapper__row">
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-            </div>
-            <div class="carousel-wrapper__separator"></div>
-            <div class="carousel-wrapper__row">
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-            </div>
-            <div class="carousel-wrapper__separator"></div>
-            <div class="carousel-wrapper__row">
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--inactive"></div>
-            </div>
-            <div class="carousel-wrapper__separator"></div>
-            <div class="carousel-wrapper__row">
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-            </div>
-            <div class="carousel-wrapper__separator"></div>
-            <div class="carousel-wrapper__row">
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-            </div>
-            <div class="carousel-wrapper__separator"></div>
-            <div class="carousel-wrapper__row">
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
-              <div class="carousel-wrapper__value carousel-wrapper__value--blue"></div>
             </div>
           </div>
         </v-carousel-item>
@@ -609,10 +609,10 @@
     </div>
   </div>
 </template>
-<!--      <div class="text-h5 carousel-title-next font-weight-bold carousel-title mx-5"></div>-->
-<!--&lt;!&ndash;      <div class=""></div>&ndash;&gt;-->
-<!--&lt;!&ndash;      <div class=""></div>&ndash;&gt;-->
-<!--&lt;!&ndash;      <div class=""></div>&ndash;&gt;-->
+     <!-- <div class="text-h5 carousel-title-next font-weight-bold carousel-title mx-5"></div>
+&lt;!&ndash;      <div class=""></div>&ndash;&gt;
+&lt;!&ndash;      <div class=""></div>&ndash;&gt;
+&lt;!&ndash;      <div class=""></div>&ndash;&gt; -->
 <script>
   export default {
     data() {

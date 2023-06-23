@@ -5,16 +5,6 @@
     background-color: $dark-blue-color;
     padding: 70px 0 100px;
 
-    // &__products-wrapper-desktop {
-    //   display: none;
-    //   width: 1240px;
-    //   padding-top: 100px;
-
-    //   @include onDesktop {
-    //     display: flex;
-    //   }
-    // }
-
     &__title {
       display: block;
       margin: 0 auto;
@@ -50,6 +40,12 @@
       display: block;
       margin: 0 auto;
     }
+
+    &__carousel {
+      @include onDesktop {
+        display: none;
+      }
+    }
   }
 </style>
 
@@ -63,6 +59,12 @@
         :product="product"
       />
     </div>
+    <SixBlockCarousel
+      class="six__carousel"
+      v-for="product, index in products"
+      :key="index"
+      :product="product"
+    />
     <OfferButton class="six__button"/>
 
   </div>
@@ -72,6 +74,7 @@
 <script setup>
   import OfferButton from '../partials/OfferButton.vue';
   import ProductCardSix from './ProductCardSix.vue';
+  import SixBlockCarousel from './SixBlockCarousel.vue';
 
   const products = [
     {
