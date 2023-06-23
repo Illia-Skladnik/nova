@@ -44,13 +44,19 @@
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
-      margin: 0 auto 40px;
+      margin: 0 auto;
 
       width: 335px;
 
-      @include onDesktop {
-        margin-bottom: 60;
+      .first__card:last-of-type {
+        margin-bottom: 40px;
+
+        @include onDesktop {
+          margin-bottom: 60;
+        }
       }
+
+
 
       @include on2columns {
         width: 820px;
@@ -96,8 +102,9 @@
         :key="index"
         :product="product"
       />
+      <OfferButton class="first__button" />
     </div>
-    <OfferButton class="first__button" />
+
     <img :src="background" alt="background" class="first__background"/>
   </div>
 </template>

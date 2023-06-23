@@ -5,6 +5,7 @@
     width: 246px;
     background-color: #09d504;
     color: $white-color;
+    z-index: 1;
 
     font-family: 'Poppins', sans-serif;
     font-size: 16px;

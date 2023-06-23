@@ -101,6 +101,7 @@
     &__button {
       display: block;
       margin: 0 auto;
+      position: relative;
     }
 
     &__background {
@@ -111,6 +112,7 @@
       display: block;
       left: -100px;
       top: 600px;
+      z-index: 0;
 
       @include onDesktop {
         width: 967px;
@@ -123,7 +125,8 @@
 </style>
 
 <template>
-  <div class="eight">
+  <div>
+    <div class="eight">
     <h2 class="eight__title">FAQ</h2>
 
     <div
@@ -332,9 +335,12 @@
       </span>
       <div class="eight__separator eight__separator--last"></div>
     </div>
+
     <OfferButton class="eight__button"/>
     <img :src="background" alt="background" class="eight__background"/>
   </div>
+  </div>
+
 </template>
 
 
