@@ -2,6 +2,8 @@
   @import '@/assets/styles/_mixins.scss';
   @import '@/assets/styles/variables.scss';
   .first {
+    overflow: hidden;
+    position: relative;
     background-color: $dark-navy-blue-color;
     padding: 60px 20px 40px;
     height: max-content;
@@ -63,6 +65,24 @@
       display: block;
       margin: 0 auto;
     }
+
+    &__background {
+      width: 550px;
+      height: 838px;
+
+      position: absolute;
+      display: block;
+      right: -60px;
+      top: -160px;
+
+      @include onDesktop {
+        z-index: 0;
+        width: 1212px;
+        height: 1515px;
+        right: 0;
+        top: -290px;
+      }
+    }
   }
 </style>
 
@@ -78,13 +98,15 @@
       />
     </div>
     <OfferButton class="first__button" />
-
+    <img :src="background" alt="background" class="first__background"/>
   </div>
 </template>
 
 <script setup>
   import FirstBlockCard from './FirstBlockCard.vue';
   import OfferButton from '../partials/OfferButton.vue';
+  const background = new URL('/src/assets/images/first-block-background.png', import.meta.url);
+
   const products = [
     {
       'title': '50%',

@@ -73,8 +73,6 @@
         right: 0;
         top: -10px;
       }
-
-
     }
   }
 </style>

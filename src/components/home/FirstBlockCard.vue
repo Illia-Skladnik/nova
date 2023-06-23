@@ -5,6 +5,7 @@
     height: 333px;
     width: 335px;
     position: relative;
+    z-index: 1;
 
     @include on2columns {
       height: 398px;

@@ -2,6 +2,7 @@
   @import '@/assets/styles/_mixins.scss';
   @import '@/assets/styles/variables.scss';
   .seven {
+    position: relative;
     background-color: $dark-navy-blue-color;
     padding: 60px 14px 60px 20px;
     overflow: hidden;
@@ -11,7 +12,6 @@
     }
 
     &__wrapper {
-      // overflow: hidden;
       width: 343px;
       margin: 0 auto;
 
@@ -90,9 +90,27 @@
 
     &__text-wrapper {
       margin:  0 57px 40px 0;
+      position: relative;
 
       @include onDesktop {
         margin-bottom: 0;
+      }
+    }
+
+    &__background {
+      width: 430px;
+      height: 538px;
+
+      position: absolute;
+      display: block;
+      left: -60px;
+      top: 10px;
+
+      @include onDesktop {
+        width: 808px;
+        height: 810px;
+        right: 0;
+        top: -10px;
       }
     }
   }
@@ -100,6 +118,7 @@
 
 <template>
   <div class="seven">
+    <img :src="background" alt="background" class="seven__background"/>
     <div class="seven__wrapper">
       <div class="seven__text-wrapper">
       <h2 class="seven__title">Wsparcie techniczne</h2>
@@ -143,5 +162,6 @@
 <script setup>
   import OfferButton from '../partials/OfferButton.vue';
 
+  const background = new URL('/src/assets/images/seven-block-background.png', import.meta.url);
   const engine = new URL('@/assets/images/engine.png', import.meta.url);
 </script>
