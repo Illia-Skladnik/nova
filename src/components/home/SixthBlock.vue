@@ -5,10 +5,15 @@
     background-color: $dark-blue-color;
     padding: 70px 0 100px;
 
-    &__products-wrapper-desktop {
-      width: 1240px;
-      padding-top: 100px;
-    }
+    // &__products-wrapper-desktop {
+    //   display: none;
+    //   width: 1240px;
+    //   padding-top: 100px;
+
+    //   @include onDesktop {
+    //     display: flex;
+    //   }
+    // }
 
     &__title {
       display: block;
@@ -51,7 +56,6 @@
 <template>
   <div class="six">
     <h2 class="six__title">Przykładowe ceny</h2>
-    <div class="six__products-wrapper-desktop"></div>
     <div class="six__products-wrapper">
       <ProductCardSix
         v-for="product, index in products"

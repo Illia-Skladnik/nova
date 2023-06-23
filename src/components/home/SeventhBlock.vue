@@ -4,12 +4,14 @@
   .seven {
     background-color: $dark-navy-blue-color;
     padding: 60px 14px 60px 20px;
+    overflow: hidden;
 
     @include onDesktop {
       padding: 149px 23px 149px 100px;
     }
 
     &__wrapper {
+      // overflow: hidden;
       width: 343px;
       margin: 0 auto;
 

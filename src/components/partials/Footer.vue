@@ -96,7 +96,7 @@
 
   const background = new URL('/src/assets/images/footer-background.png', import.meta.url);
 
-  const copyright  = computed(()=>{
+  const copyright  = computed(() => {
     const date = (new Date()).getFullYear();
 
     return `© ${date} novaenergy. All rights reserved`
