@@ -22,6 +22,7 @@
       position: absolute;
       width: 100%;
       object-fit: cover;
+      // filter: blur(5px);
 
       @include onMobile {
         height: #{$banner-height-desktop}px;
@@ -29,7 +30,6 @@
 
       @include onDesktop {
         width: 100%;
-
       }
     }
 
@@ -131,10 +131,17 @@
 
 <template>
   <header class="header">
-    <picture class="header__picture">
+    <video
+      autoplay
+      muted
+      loop
+      :src="video"
+      class="header__image"
+    ></video>
+    <!-- <picture class="header__picture">
       <source media="(min-width: 375px)" :srcset="desktopBanner">
       <img class="header__image" :src="mobileBanner" alt="banner">
-    </picture>
+    </picture> -->
 
     <div  class="header__block">
       <div class="header__wrapper">
@@ -176,6 +183,8 @@
   import { computed } from 'vue';
 
   const visibleButton = computed(() => window.innerWidth < 1440);
-  const mobileBanner = new URL('@/assets/images/mobile/main.jpg', import.meta.url);
-  const desktopBanner = new URL('@/assets/images/desktop/main.jpg', import.meta.url);
+  // const mobileBanner = new URL('@/assets/images/mobile/main.jpg', import.meta.url);
+  // const desktopBanner = new URL('@/assets/images/desktop/main.jpg', import.meta.url);
+
+  const video = new URL('@/assets/videos/background.mov', import.meta.url);
 </script>

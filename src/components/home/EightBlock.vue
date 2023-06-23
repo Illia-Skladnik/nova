@@ -4,6 +4,8 @@
   .eight {
     background-color: $dark-blue-color;
     padding: 60px 20px 60px;
+    position: relative;
+    overflow: hidden;
 
     @include onDesktop {
       padding: 120px 100px 80px;
@@ -99,6 +101,23 @@
     &__button {
       display: block;
       margin: 0 auto;
+    }
+
+    &__background {
+      width: 430px;
+      height: 538px;
+
+      position: absolute;
+      display: block;
+      left: -100px;
+      top: 600px;
+
+      @include onDesktop {
+        width: 967px;
+        height: 972px;
+        left: 0;
+        top: 900px;
+      }
     }
   }
 </style>
@@ -313,8 +332,8 @@
       </span>
       <div class="eight__separator eight__separator--last"></div>
     </div>
-
     <OfferButton class="eight__button"/>
+    <img :src="background" alt="background" class="eight__background"/>
   </div>
 </template>
 
@@ -324,6 +343,7 @@
   import arrowDown from '@/assets/svg/arrowDown.svg';
   import OfferButton from '../partials/OfferButton.vue';
 
+  const background = new URL('/src/assets/images/pipes.png', import.meta.url);
   const questions = ref({
     one: true,
     two: true,

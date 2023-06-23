@@ -12,6 +12,7 @@
     }
 
     &__wrapper {
+      position: relative;
       width: 343px;
       margin: 0 auto;
 
@@ -103,14 +104,14 @@
 
       position: absolute;
       display: block;
-      left: -60px;
-      top: 10px;
+      left: -100px;
+      top: 0;
 
       @include onDesktop {
-        width: 808px;
-        height: 810px;
-        right: 0;
-        top: -10px;
+        width: 967px;
+        height: 972px;
+        left: 0;
+        top: 0;
       }
     }
   }
