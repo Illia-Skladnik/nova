@@ -189,7 +189,7 @@
         <div class="carousel-wrapper__title">Cena</div>
       </div>
 
-      <v-carousel class="carousel-wrapper__carousel" :show-arrows="false" hide-delimiters v-model="benefitSlider">
+      <v-carousel class="carousel-wrapper__carousel" :show-arrows="false" hide-delimiters v-model="benefitSlider" cycle >
         <v-carousel-item>
           <div class="carousel-wrapper__item-1">
             <div class="carousel-wrapper__row">
@@ -609,10 +609,7 @@
     </div>
   </div>
 </template>
-     <!-- <div class="text-h5 carousel-title-next font-weight-bold carousel-title mx-5"></div>
-&lt;!&ndash;      <div class=""></div>&ndash;&gt;
-&lt;!&ndash;      <div class=""></div>&ndash;&gt;
-&lt;!&ndash;      <div class=""></div>&ndash;&gt; -->
+
 <script>
   export default {
     data() {

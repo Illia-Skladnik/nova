@@ -47,6 +47,26 @@
       }
     }
   }
+
+  .carousel-divider {
+   border-bottom: 2px solid;
+   width: 42px;
+   border-color: rgba(255, 255, 255, 0.1);
+ }
+ .border-color-selected {
+   border-color: #FAA51A;
+ }
+ .carousel {
+    width: 264px;
+    margin: 0 auto;
+    height: auto;
+  }
+
+  .slider {
+    padding: 46px 0 60px;
+    margin: 0 auto;
+    gap: 7px;
+  }
 </style>
 
 <template>
@@ -59,12 +79,28 @@
         :product="product"
       />
     </div>
-    <SixBlockCarousel
-      class="six__carousel"
-      v-for="product, index in products"
-      :key="index"
-      :product="product"
-    />
+
+    <div class="carousel">
+      <v-carousel :show-arrows="false" hide-delimiters v-model="slider" cycle>
+          <v-carousel-item
+            v-for="product, index in products"
+            :key="index"
+            :product="product"
+          >
+            <SixCarouselItem :product="product"/>
+          </v-carousel-item>
+        </v-carousel>
+    </div>
+
+    <div class=" d-flex justify-center slider">
+      <div v-for="(slide,index) in products"
+        :key="index"
+        :aria-details="slide.title"
+        :class="index === slider ? 'border-color-selected':''"
+        class="carousel-divider">
+      </div>
+    </div>
+
     <OfferButton class="six__button"/>
 
   </div>
@@ -74,8 +110,11 @@
 <script setup>
   import OfferButton from '../partials/OfferButton.vue';
   import ProductCardSix from './ProductCardSix.vue';
-  import SixBlockCarousel from './SixBlockCarousel.vue';
 
+  import SixCarouselItem from './SixCarouselItem.vue';
+  import { ref } from 'vue';
+
+  const slider = ref(0);
   const products = [
     {
       title: 'Rura 5 metrów Ø 25 mm',
