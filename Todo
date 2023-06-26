@@ -9,3 +9,4 @@ fix images paths in FirstBlockCard
 Second block add paddings horizontal
 Header BurgerMenu and button rewrite v-if/v-else on @include onDesktop hide
 create correct borders for table
+check arrow left and arrow right in Advantages block
