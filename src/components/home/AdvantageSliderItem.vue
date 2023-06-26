@@ -5,16 +5,21 @@
     width: 375px;
     margin: 0 auto;
     position: relative;
-    // height: 1500px!important;
 
-    &__picture {
-      // width: 375px;
-      // height: 375px;
+    @include onDesktop {
+      width: 1240px;
     }
 
     &__image {
       width: 375px;
       height: 375px;
+
+      @include onDesktop {
+        position: absolute;
+        right: 0;
+        width: 715px;
+        height: 715px;
+      }
     }
 
     &__text-block {
@@ -26,6 +31,14 @@
 
       background-color: $dark-blue-color;
       padding: 40px 24px 0 31px;
+
+      @include onDesktop {
+        padding: 75px 44px 0 72px;
+        top: 83px;
+        left: 0;
+        width: 687px;
+        height: 549px;
+      }
     }
 
     &__title {
@@ -34,6 +47,11 @@
       font-size: 32px;
       font-weight: 600;
       line-height: 41px;
+
+      @include onDesktop {
+        font-size: 48px;
+        line-height: 58px;
+      }
     }
 
     &__description {
@@ -44,10 +62,30 @@
       font-weight: 500;
       line-height: 24px;
       margin-bottom: 20px;
+
+      @include onDesktop {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+        margin-bottom: 57px;
+      }
     }
 
     &__title-wrapper {
       margin-bottom: 30px;
+    }
+
+    &__slide-btn {
+      height: 92px;
+      width: 92px;
+
+      &--prev {
+        margin-right: 6px;
+
+        @include onDesktop {
+          margin-right: 10px;
+        }
+      }
     }
   }
 </style>
@@ -66,8 +104,8 @@
       </div>
 
       <span class="advantage__description">{{ advantage.description }}</span>
-      <img :src="arrowLeftWhite" alt="arrow">
-      <img :src="arrowRightGreen" alt="arrow">
+      <img :src="arrowLeftWhite" alt="arrow" class="advantage__slide-btn advantage__slide-btn--prev" @click="$emit('prev')">
+      <img :src="arrowRightGreen" alt="arrow" class="advantage__slide-btn" @click="$emit('next')">
     </div>
   </div>
 </template>
@@ -81,4 +119,5 @@
   const advantageMob = new URL(`/src/assets/images/mobile/${props.advantage.image}`, import.meta.url);
   const advantageDesk = new URL(`/src/assets/images/desktop/${props.advantage.image}`, import.meta.url);
   const props = defineProps(['advantage', 'index']);
+  defineEmits(['next', 'prev']);
 </script>

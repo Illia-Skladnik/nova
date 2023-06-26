@@ -36,29 +36,49 @@
 
     &__carousel {
       margin-bottom: 40px;
+      height: 675px!important;
+
+      @include onDesktop {
+        height: 715px!important;
+      }
     }
 
     &__slider {
       padding-bottom: 40px;
+      gap: 7px;
+
+      @include onDesktop {
+        gap: 9px;
+      }
     }
   }
 
   .carousel-divider {
-   border-bottom: 2px solid;
-   width: 33px;
-   border-color: rgba(255, 255, 255, 0.1);
- }
+    border-bottom: 2px solid;
+    width: 42px;
+    border-color: rgba(255, 255, 255, 0.1);
 
- .border-color-selected {
-   border-color: #FAA51A;
- }
+    @include onDesktop {
+      width: 57px;;
+    }
+  }
+
+  .border-color-selected {
+    border-color: #FAA51A;
+  }
 </style>
 
 <template>
   <div class="five">
     <h2 class="five__title">Zalety polibutylenu</h2>
 
-    <v-carousel :show-arrows="false" hide-delimiters v-model="slider" class="five__carousel" height="675px">
+    <v-carousel
+      :show-arrows="false"
+      hide-delimiters
+      v-model="slider"
+      class="five__carousel"
+      cycle
+    >
       <v-carousel-item
         v-for="advantage, index in advantages"
         :key="index"
@@ -66,16 +86,18 @@
         <AdvantageSliderItem
           :advantage="advantage"
           :index="index"
+          @prev="prevSlider"
+          @next="nextSlider"
         />
       </v-carousel-item>
     </v-carousel>
 
-    <div class="px-16 d-flex justify-center five__slider">
+    <div class="d-flex justify-center five__slider">
       <div v-for="(slide,index) in advantages"
         :key="index"
         :aria-details="slide.title"
         :class="index === slider ? 'border-color-selected':''"
-        class="carousel-divider mx-1">
+        class="carousel-divider">
       </div>
     </div>
 
@@ -90,6 +112,16 @@
   import AdvantageSliderItem from './AdvantageSliderItem.vue';
 
   const slider = ref(0);
+  const prevSlider = () => {
+    slider.value === 0
+      ? slider.value = advantages.length - 1
+      : slider.value -= 1;
+  };
+  const nextSlider = () => {
+    slider.value === advantages.length - 1
+      ? slider.value = 0
+      : slider.value += 1;
+  };
 
   const advantages = [
     {

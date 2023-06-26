@@ -70,9 +70,14 @@
       font-size: 16px;
       font-weight: 700;
       line-height: 25px;
+      display:  none;
 
       &:hover {
         background-color: $dark-navy-blue-color;
+      }
+
+      @include onDesktop {
+        display: block;
       }
     }
 
@@ -125,6 +130,12 @@
         padding: 35px 100px 0;
       }
     }
+
+    &__burger-menu {
+      @include onDesktop {
+        display: none;
+      }
+    }
   }
 
 </style>
@@ -138,23 +149,18 @@
       :src="video"
       class="header__image"
     ></video>
-    <!-- <picture class="header__picture">
-      <source media="(min-width: 375px)" :srcset="desktopBanner">
-      <img class="header__image" :src="mobileBanner" alt="banner">
-    </picture> -->
 
     <div  class="header__block">
       <div class="header__wrapper">
       <nav class="header__nav">
         <Logo class="header__logo"/>
         <img
-          v-if="visibleButton"
-          class="logo"
+          class="header__burger-menu"
           :src="burgerMenu"
           alt="Burger menu"
         />
 
-        <button v-else class="header__login-button">
+        <button class="header__login-button">
           ZALOGUJ
         </button>
       </nav>
@@ -168,7 +174,6 @@
       <div class="header__description">
         Prezentujemy systemy wciskowe z polibutylenu - materiału odpornego na mróz, chemię i wysokie ciśnienie!
       </div>
-
       <OfferButton/>
     </div>
     </div>
@@ -180,11 +185,6 @@
   import Logo from './Logo.vue';
   import OfferButton from './OfferButton.vue';
   import burgerMenu from '@/assets/svg/burgerMenu.svg';
-  import { computed } from 'vue';
-
-  const visibleButton = computed(() => window.innerWidth < 1440);
-  // const mobileBanner = new URL('@/assets/images/mobile/main.jpg', import.meta.url);
-  // const desktopBanner = new URL('@/assets/images/desktop/main.jpg', import.meta.url);
 
   const video = new URL('@/assets/videos/background.mov', import.meta.url);
 </script>

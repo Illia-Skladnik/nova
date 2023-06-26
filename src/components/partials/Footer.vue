@@ -14,12 +14,12 @@
 
     &__separator {
       background-color: $vivid-orange-color;
-      width: 100%;
+      width: 89%;
       height: 1px;
-
-      margin-bottom: 40px;
-
+      margin: 0 auto 40px;
+      
       @include onDesktop {
+        width: 100%;
         margin-bottom: 70px;
       }
     }

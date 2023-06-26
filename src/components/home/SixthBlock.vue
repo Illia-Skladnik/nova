@@ -60,12 +60,20 @@
     width: 264px;
     margin: 0 auto;
     height: auto;
+
+    @include onDesktop {
+      display: none;
+    }
   }
 
   .slider {
     padding: 46px 0 60px;
     margin: 0 auto;
     gap: 7px;
+
+    @include onDesktop {
+      display: none!important;
+    }
   }
 </style>
 

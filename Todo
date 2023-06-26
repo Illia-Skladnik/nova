@@ -1,12 +1,2 @@
-Logo add btn
-Rewrite header on the grid or add properties for 10% margin
-Check hovers and actives
-Fix white background on the header
-Check separator width in footer it shouldn't be 100%
-Logo.vue rewrite img to btn
-Add everywhere background images
-fix images paths in FirstBlockCard
-Second block add paddings horizontal
-Header BurgerMenu and button rewrite v-if/v-else on @include onDesktop hide
-create correct borders for table
 check arrow left and arrow right in Advantages block
+ask about products slider behavior

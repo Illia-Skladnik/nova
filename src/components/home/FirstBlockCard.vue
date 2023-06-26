@@ -54,14 +54,6 @@
 
     }
 
-    &__picture {
-
-    }
-
-    &__image {
-
-    }
-
     .card__overlay {
       position: absolute;
       bottom: 0;

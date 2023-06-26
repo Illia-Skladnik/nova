@@ -104,22 +104,22 @@
         <form @submit.prevent="onSubmit" class="nine__form">
           <label class="nine__input-lable">
             <span class="nine__input-title">Imię</span>
-            <input class="nine__input" type="text" placeholder="Imię"/>
+            <input class="nine__input" type="text" placeholder="Imię" v-model="form.name"/>
           </label>
 
           <label class="nine__input-lable">
             <span class="nine__input-title">Telefon</span>
-            <input class="nine__input" type="text" placeholder="Telefon"/>
+            <input class="nine__input" type="text" placeholder="Telefon" v-model="form.phone"/>
           </label>
 
           <label class="nine__input-lable">
             <span class="nine__input-title">E-mail</span>
-            <input class="nine__input" type="text" placeholder="E-mail"/>
+            <input class="nine__input" type="text" placeholder="E-mail" v-model="form.email"/>
           </label>
 
           <label class="nine__input-lable">
             <span class="nine__input-title">Treść pytania</span>
-            <input class="nine__input nine__input--large" type="text" placeholder="Treść pytania"/>
+            <input class="nine__input nine__input--large" type="text" placeholder="Treść pytania" v-model="form.question"/>
           </label>
 
           <OfferButton type="submit" class="nine__button"/>
@@ -135,10 +135,22 @@
 
 
 <script setup>
+  import { ref } from 'vue';
+  import OfferButton from '../partials/OfferButton.vue';
+  const form = ref({
+    name: '',
+    phone: '',
+    email: '',
+    question: '',
+  });
+
   const onSubmit = () => {
-    console.log('submit');
+    console.log(form.value);
+
+    for (const item in form.value) {
+      form.value[item] = '';
+    }
   };
   const imgUrlMob = new URL('@/assets/images/mobile/employee.jpg', import.meta.url);
   const imgUrlDesk = new URL('@/assets/images/desktop/employee.jpg', import.meta.url);
-  import OfferButton from '../partials/OfferButton.vue';
 </script>
