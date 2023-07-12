@@ -17,7 +17,7 @@
       width: 89%;
       height: 1px;
       margin: 0 auto 40px;
-      
+
       @include onDesktop {
         width: 100%;
         margin-bottom: 70px;
